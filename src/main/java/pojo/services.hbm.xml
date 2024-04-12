@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="pojo.Services" table="services" catalog="streaming"
+		optimistic-lock="version">
+		<id name="idservices" type="java.lang.Long">
+			<column name="idservices" />
+			<generator class="identity" />
+		</id>
+		<property name="nume_serv" type="string">
+			<column name="nume_serv" length="45" />
+		</property>
+		<property name="taxa_serv" type="java.lang.Float">
+			<column name="taxa_serv" length="45" />
+		</property>
+		<set name="abonament" table="abonament" inverse="true"
+			lazy="true" fetch="select">
+			<key>
+				<column name="idservices" />
+			</key>
+			<one-to-many class="pojo.Abonament" />
+		</set>
+	</class>
+</hibernate-mapping>

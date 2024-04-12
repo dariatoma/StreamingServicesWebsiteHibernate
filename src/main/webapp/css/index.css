@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image: url("images/imag1.jpg");
+	background-repeat: repeat;
+	background-position: center top;
+}
+h1, h2 , a{
+	color: black;
+	margin-bottom: 5%;
+}
+table {
+    color: black;
+    width: 100%; /* Set the width to 100% */
+    border-collapse: collapse;
+    margin-bottom: 2%; /* Adjust the margin as needed */
+}
+td {
+	color: black;
+}
+
+div{
+	margin: 5%;
+	margin-left: 30%;
+	margin-right:30%;
+	background-color: white;
+	border-style: solid;
+	border-radius: 3%;
+	opacity: 93%;
+}

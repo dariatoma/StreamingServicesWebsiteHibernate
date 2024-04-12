@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="pojo.Abonati" table="abonati" catalog="streaming"
+		optimistic-lock="version">
+		<id name="idabonati" type="java.lang.Long">
+			<column name="idabonati" />
+			<generator class="identity" />
+		</id>
+		<property name="nume" type="string">
+			<column name="nume" length="45" />
+		</property>
+		<property name="prenume" type="string">
+			<column name="prenume" length="45" />
+		</property>
+		<property name="varsta" type="java.lang.Integer">
+			<column name="varsta" length="45" />
+		</property>
+		<property name="data_nasterii" type="string">
+			<column name="data_nasterii" length="45" />
+		</property>
+		<property name="tara" type="string">
+			<column name="tara" length="45" />
+		</property>
+		<property name="adresa_mail" type="string">
+			<column name="adresa_mail" length="100" />
+		</property>
+		<set name="abonament" table="abonament" inverse="true"
+			lazy="true" fetch="select">
+			<key>
+				<column name="idabonati" />
+			</key>
+			<one-to-many class="pojo.Abonament" />
+		</set>
+	</class>
+</hibernate-mapping>

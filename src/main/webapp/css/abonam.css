@@ -1,0 +1,34 @@
+@charset "ISO-8859-1";
+
+body {
+    background-color: lightblue;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+h1, h2, a {
+    color: black;
+    margin-bottom: 5%;
+}
+
+table {
+    color: black;
+    width: 100%; /* Set the width to 100% */
+    border-collapse: collapse;
+    margin-bottom: 2%; /* Adjust the margin as needed */
+}
+
+td {
+    color: black;
+    padding: 8px; /* Add padding for better spacing */
+}
+
+div {
+    margin: 5%;
+    margin-left: 10%; /* Adjust the left margin */
+    margin-right: 10%; /* Adjust the right margin */
+    background-color: white;
+    border-style: solid;
+    border-radius: 3%;
+    opacity: 93%;
+}
